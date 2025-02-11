@@ -1,0 +1,1 @@
+ssh-keygen command is used to create a key pair. It saves your private and public keys in the ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub files.
