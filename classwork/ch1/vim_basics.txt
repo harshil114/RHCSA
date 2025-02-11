@@ -1,0 +1,4 @@
+vim basics
+- :w command used for save and remains in command for more editing
+- :wq saves and quits vim
+- :q! quits vim without saving  
