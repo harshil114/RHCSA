@@ -1,0 +1,8 @@
+- command substitution allows the ouput of a command to replace the command itself on the command line.
+
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo the time is $(date +%M) minutes past $(date +%l%p).
+the time is 58 minutes past 6PM.
+
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo today is $(date +%A).
+today is Wednesday.
+
