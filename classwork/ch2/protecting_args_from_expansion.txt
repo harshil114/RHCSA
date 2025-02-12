@@ -1,0 +1,12 @@
+'\' backslash is an escape character in bash shell. it protects the following character from expansion.
+
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo the value of $HOME is your home directory
+the value of /home/harshil is your home directory
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo the value of \$HOME is you directory
+the value of $HOME is you directory
+
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo "will variable $myhost evaluate to $(hostname -s)?"
+will variable vbox evaluate to vbox?
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo 'will variable $myhost evaluate to $(hostname -s)?'
+will variable $myhost evaluate to $(hostname -s)?
+
