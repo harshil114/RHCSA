@@ -1,0 +1,29 @@
+Change your working directory to ~/Videos/season2, and then copy the first episode
+of the season to the vacation directory. Use a single cd command to change from your
+working directory to the ~/Documents/my_bestseller/vacation directory. List its
+files. Use the previous working directory argument to return to the season2 directory. (This
+argument succeeds if the last directory change with the cd command used one command
+rather than several cd commands.) From the season2 directory, copy the episode 2 file into
+the vacation directory. Use the shortcut again to return to the vacation directory.
+
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/Videos/season2$ cp *episode1.ogg ~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/vacation/
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/Videos/season2$ cd ~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/vacation/
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/vacation$ ls
+mystery_chapter7.odf  mystery_chapter8.odf  tv_season2_episode1.ogg
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/vacation$ cd ~/Documents/RHCSA/homework/ch2/lab_practice/Videos/season2
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/Videos/season2$ ls
+tv_season2_episode1.ogg  tv_season2_episode3.ogg  tv_season2_episode5.ogg
+tv_season2_episode2.ogg  tv_season2_episode4.ogg  tv_season2_episode6.ogg
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/Videos/season2$ cp *episode2.ogg ~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/vacation
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/Videos/season2$ ls
+tv_season2_episode1.ogg  tv_season2_episode3.ogg  tv_season2_episode5.ogg
+tv_season2_episode2.ogg  tv_season2_episode4.ogg  tv_season2_episode6.ogg
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/Videos/season2$ cd ~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/vacation
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/vacation$ ls
+mystery_chapter7.odf  mystery_chapter8.odf  tv_season2_episode1.ogg  tv_season2_episode2.ogg
+
