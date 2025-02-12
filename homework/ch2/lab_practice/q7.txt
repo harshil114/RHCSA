@@ -1,0 +1,33 @@
+Change to the chapters directory. Use the tilde (~) home directory shortcut to move
+all book chapters to the chapters directory, which is now your current directory. Use the
+simplest syntax to specify the destination directory.
+You want to send the first two chapters to the editor for review. Move only those two
+chapters to the editor directory to avoid modifying them during the review. Starting from
+the chapters subdirectory, use brace expansion with a range to specify the chapter file
+names to move and a relative path for the destination directory.
+While on vacation, you intend to write chapters 7 and 8. Use a single command to move
+the files from the chapters directory to the vacation directory. Specify the chapter file
+names by using brace expansion with a list of strings and without using wildcard characters.
+
+
+
+harshil@vbox:~$ cd ~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ mv ~/Documents/RHCSA/homework/ch2/lab_practice/mystery_chapter*.odf .
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ ls
+mystery_chapter1.odf  mystery_chapter3.odf  mystery_chapter5.odf  mystery_chapter7.odf
+mystery_chapter2.odf  mystery_chapter4.odf  mystery_chapter6.odf  mystery_chapter8.odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseharshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ mv mystery_chapter{1..2}.odf ../editor
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ ls
+mystery_chapter3.odf  mystery_chapter5.odf  mystery_chapter7.odf
+mystery_chapter4.odf  mystery_chapter6.odf  mystery_chapter8.odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ ls ../editor
+mystery_chapter1.odf  mystery_chapter2.odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ mv mystery_chapter{7,8}.odf ../vacation
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ ls
+mystery_chapter3.odf  mystery_chapter5.odf
+mystery_chapter4.odf  mystery_chapter6.odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ cd vacation
+bash: cd: vacation: No such file or directory
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ ls ../vacation
+mystery_chapter7.odf  mystery_chapter8.odf
+
