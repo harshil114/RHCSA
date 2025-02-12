@@ -1,0 +1,7 @@
+- This is data from file1.
+- When we have to create hardlink then first create a file of what you want to create a hardlink.
+- hardlink points to the same data of original file.
+- We will make hardlink of this file. For that command is:
+	ln <source_file> <hard_link_name>
+- To verify ls -il, followed with both files name is used.
+- If original file is deleted the hard link remains.
