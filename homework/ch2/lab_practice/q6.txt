@@ -1,0 +1,24 @@
+Create a two-level directory hierarchy with a single command to organize the mystery book
+chapters. Create the my_bestseller subdirectory under the Documents directory, and
+the chapters subdirectory under the new my_bestseller directory. Create three more
+subdirectories directly under the my_bestseller directory with a single command. Name
+these subdirectories editor, changes, and vacation. You do not need to use the mkdir
+-p command to create parents because the my_bestseller parent directory exists.
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ mkdir -p my_bestseller/chapters
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ ls
+my_bestseller         mystery_chapter6.odf  q4.txt
+mystery_chapter1.odf  mystery_chapter7.odf  q5.txt
+mystery_chapter2.odf  mystery_chapter8.odf  q6.txt
+mystery_chapter3.odf  project_plans         Videos
+mystery_chapter4.odf  q2.txt
+mystery_chapter5.odf  q3.txt
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ cd my_bestseller/
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ ls
+chapters
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ mkdir editor changes vacation
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ ls
+changes  chapters  editor  vacation
+
