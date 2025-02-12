@@ -1,0 +1,16 @@
+Create 12 files with names
+tv_seasonX_episodeY.ogg in the /home/student directory. Replace X with the season
+number and Y with that season's episode, for two seasons of six episodes each.
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ touch tv_{season1,season2}_episode{1..6}.ogg
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ ls
+project_plans            tv_season1_episode6.ogg
+q2.txt                   tv_season2_episode1.ogg
+q3.txt                   tv_season2_episode2.ogg
+tv_season1_episode1.ogg  tv_season2_episode3.ogg
+tv_season1_episode2.ogg  tv_season2_episode4.ogg
+tv_season1_episode3.ogg  tv_season2_episode5.ogg
+tv_season1_episode4.ogg  tv_season2_episode6.ogg
+tv_season1_episode5.ogg
+
