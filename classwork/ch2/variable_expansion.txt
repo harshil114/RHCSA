@@ -1,0 +1,11 @@
+variable is used to store value.
+syntax is: 
+var_name=value
+echo $var_name
+
+example:
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ username=harshil
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo $username
+harshil
+
+- also can use as echo ${username}
