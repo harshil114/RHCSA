@@ -1,0 +1,4 @@
+- This is softlink.
+- This is a pointer to another file's path rather than its inode.
+- To create softlink: ln -s <src_file> <soft_link_name>
+- If the original file is deleted, softlink becomes broken
