@@ -1,0 +1,20 @@
+As the author of a successful series of mystery novels, you are editing your next bestseller's
+chapters for publishing. Create eight files with names mystery_chapterX.odf. Replace X
+with the numbers 1 through 8.
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ touch mystery_chapter{1..8}.odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ ls
+mystery_chapter1.odf     tv_season1_episode2.ogg
+mystery_chapter2.odf     tv_season1_episode3.ogg
+mystery_chapter3.odf     tv_season1_episode4.ogg
+mystery_chapter4.odf     tv_season1_episode5.ogg
+mystery_chapter5.odf     tv_season1_episode6.ogg
+mystery_chapter6.odf     tv_season2_episode1.ogg
+mystery_chapter7.odf     tv_season2_episode2.ogg
+mystery_chapter8.odf     tv_season2_episode3.ogg
+project_plans            tv_season2_episode4.ogg
+q2.txt                   tv_season2_episode5.ogg
+q3.txt                   tv_season2_episode6.ogg
+tv_season1_episode1.ogg
+
