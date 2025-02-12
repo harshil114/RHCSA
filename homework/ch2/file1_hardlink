@@ -1,0 +1,4 @@
+Create a hard link called /home/student/links/file.hardlink for the /home/
+student/files/target.file file. Verify the link count for the original file and the new
+linked file.
+

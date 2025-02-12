@@ -1,0 +1,3 @@
+Create a symbolic link called /home/student/tempdir that points to the /tmp directory
+on the servera machine. Verify the newly created symbolic link.
+
