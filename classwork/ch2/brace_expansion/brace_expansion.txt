@@ -1,0 +1,20 @@
+- brace expansion is used to generate multiple strings or sequence by expanding pattern enclosed in '{}'.
+
+harshil@vbox:~/Documents/RHCSA/classwork/ch2/brace_expansion$ echo {sunday,monday,tuesday,wedensdat}.log
+sunday.log monday.log tuesday.log wedensdat.log
+harshil@vbox:~/Documents/RHCSA/classwork/ch2/brace_expansion$ echo file{1..5}.txt
+file1.txt file2.txt file3.txt file4.txt file5.txt
+harshil@vbox:~/Documents/RHCSA/classwork/ch2/brace_expansion$ echo file{a..e}.txt
+filea.txt fileb.txt filec.txt filed.txt filee.txt
+harshil@vbox:~/Documents/RHCSA/classwork/ch2/brace_expansion$ echo file{a,b}{1,2}.txt
+filea1.txt filea2.txt fileb1.txt fileb2.txt
+harshil@vbox:~/Documents/RHCSA/classwork/ch2/brace_expansion$ echo file{a{1,2},b,c}.txt
+filea1.txt filea2.txt fileb.txt filec.txt
+harshil@vbox:~/Documents/RHCSA/classwork/ch2/brace_expansion$ mkdir demo{7,8,9}
+harshil@vbox:~/Documents/RHCSA/classwork/ch2/brace_expansion$ ls demo*
+demo7:
+
+demo8:
+
+demo9:
+
