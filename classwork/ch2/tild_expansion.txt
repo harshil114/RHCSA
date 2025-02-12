@@ -1,0 +1,11 @@
+tild character (~), matches the current user's home directory. 
+example:
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo ~root
+/root
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo ~harshil
+/home/harshil
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo ~/glob
+/home/harshil/glob
+harshil@vbox:~/Documents/RHCSA/classwork/ch2$ echo ~nonexistinguser
+~nonexistinguser
+
