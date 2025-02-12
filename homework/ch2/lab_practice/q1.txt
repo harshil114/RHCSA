@@ -1,0 +1,20 @@
+Create a directory called project_plans in the Documents directory. The Documents
+directory should be placed in the student user's home directory. Create two empty
+files in the project_plans directory called season1_project_plan.odf and
+season2_project_plan.odf.
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/project_plans$ touch season1_project_plan.odf season2_project_plan.odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/project_plans$ ls
+season1_project_plan.odf  season2_project_plan.odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/project_plans$ cd ..
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ ls
+project_plans  q1.txt
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ tree
+.
+├── project_plans
+│   ├── season1_project_plan.odf
+│   └── season2_project_plan.odf
+└── q1.txt
+
+
