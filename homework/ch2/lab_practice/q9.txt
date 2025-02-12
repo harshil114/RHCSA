@@ -1,0 +1,20 @@
+The authors of chapters 5 and 6 want to experiment with possible changes. Copy both files
+from the ~/Documents/my_bestseller/chapters directory to the ~/Documents/
+my_bestseller/changes directory to prevent these changes from modifying original files.
+Navigate to the ~/Documents/my_bestseller directory. Use square-bracket pattern
+matching to specify which chapter numbers to match in the filename argument of the cp
+command
+
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ cp mystery_chapter{5..6} ~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/changes/
+cp: cannot stat 'mystery_chapter5': No such file or directory
+cp: cannot stat 'mystery_chapter6': No such file or directory
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ cp *chapter{5..6}.odf ~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/changes/
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/chapters$ cd ..
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ cp chapters/mystery_chapter[56].odf changes
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ ls chapters
+mystery_chapter3.odf  mystery_chapter4.odf  mystery_chapter5.odf  mystery_chapter6.odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ ls changes
+mystery_chapter5.odf  mystery_chapter6.odf
+
