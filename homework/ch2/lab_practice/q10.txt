@@ -1,0 +1,13 @@
+Change your current directory to the changes directory and use the date +%F command
+with command substitution to copy mystery_chapter5.odf to a new file that includes the
+full date. Use the mystery_chapter5_YYYY-MM-DD.odf name format.
+By using command substitution with the date +%s command, make another copy of
+mystery_chapter5.odf, and append the current time stamp (as the number of seconds
+since the epoch, 1970-01-01 00:00 UTC) to ensure a unique file name.
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/changes$ cp mystery_chapter5.odf \mystery_chapter5_$(date +%F).odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/changes$ cp mystery_chapter5.odf \mystery_chapter5_$(date +%s).odf
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller/changes$ ls
+mystery_chapter5_1739377799.odf  mystery_chapter5_2025-02-12.odf  mystery_chapter5.odf  mystery_chapter6.odf
+
