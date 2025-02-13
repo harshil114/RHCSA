@@ -1,0 +1,14 @@
+Create a hard link to the ~/Documents/project_plans/season2_project_plan.odf
+file called ~/Documents/backups/season2_project_plan.odf.back. A hard link
+protects against accidental deletion of the original file and keeps the backup file updated as
+you change the original file. Hint: If the ~/Documents/backups directory does not exist,
+then use the mkdir command to create it.
+
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ cd ..
+harshil@vbox:~/Documents/RHCSA/homework/ch2$ mkdir backups
+harshil@vbox:~/Documents/RHCSA/homework/ch2$ cd backups/
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice$ ln ~/Documents/RHCSA/homework/ch2/lab_practice/project_plans/season2_project_plan.odf ~/Documents/RHCSA/homework/ch2/backups/season2_project_plan.odf.back
+
