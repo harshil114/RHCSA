@@ -1,0 +1,27 @@
+After further review, you decide that you do not need the plot changes. Delete the changes
+directory.
+If it is necessary, then navigate to the changes directory and delete all the files within the
+directory. You cannot delete a directory while it is the current working directory.
+Change to the parent directory of the changes directory. Try to delete the empty directory
+by using the rm command without the -r recursive option. This attempt should fail. Finally,
+use the rmdir command to delete the empty directory, which succeeds.
+When the vacation is over, you no longer need the vacation directory. Delete it by using the
+rm command with the recursive option.
+When finished, return to the student user's home directory.
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ rm changes
+rm: cannot remove 'changes': Is a directory
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ rmdir changes
+rmdir: failed to remove 'changes': Directory not empty
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ rm -rf changes
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ ls
+chapters  editor  vacation
+
+
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ rm -r vacation
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ ls
+chapters  editor
+harshil@vbox:~/Documents/RHCSA/homework/ch2/lab_practice/my_bestseller$ cd
+harshil@vbox:~$ 
+
