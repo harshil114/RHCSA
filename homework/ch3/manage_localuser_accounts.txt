@@ -1,0 +1,78 @@
+2. Create the operator1 user and confirm that it exists in the system.
+
+root@vbox:~# useradd operator1
+root@vbox:~# tail -2 /etc/passwd
+user02:x:1001:1001::/home/user02:/bin/bash
+operator1:x:1002:1002::/home/operator1:/bin/bash
+
+--------------------------------------------------------------------------------------------------------------
+3. Set the password for operator1 to redhat.
+root@vbox:~# passwd operator1
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+
+--------------------------------------------------------------------------------------------------------------
+4. Create the additional operator2 and operator3 users. Set their passwords to redhat.
+
+root@vbox:~# useradd operator2
+root@vbox:~# passwd operator2
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+root@vbox:~# useradd operator3
+root@vbox:~# passwd operator3
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+
+---------------------------------------------------------------------------------------------------------------
+5. Update the operator1 and operator2 user accounts to include the Operator One
+and Operator Two comments, respectively. Verify that the comments exist for the user
+accounts.
+
+root@vbox:~# usermod -c "operator one" operator1
+root@vbox:~# usermod -c "operator two" operator2
+root@vbox:~# tail -5 /etc/passwd
+harshil:x:1000:1000:harshil:/home/harshil:/bin/bash
+user02:x:1001:1001::/home/user02:/bin/bash
+operator1:x:1002:1002:operator one:/home/operator1:/bin/bash
+operator2:x:1003:1003:operator two:/home/operator2:/bin/bash
+operator3:x:1004:1004::/home/operator3:/bin/bash
+
+---------------------------------------------------------------------------------------------------------------6. Delete the operator3 user along with any personal data of the user. Confirm that the operator3 does not exist.
+
+root@vbox:~# userdel -r operator3
+root@vbox:~# tail -5 /etc/passwd
+gnome-remote-desktop:x:982:982:GNOME Remote Desktop:/var/lib/gnome-remote-desktop:/usr/sbin/nologin
+harshil:x:1000:1000:harshil:/home/harshil:/bin/bash
+user02:x:1001:1001::/home/user02:/bin/bash
+operator1:x:1002:1002:operator one:/home/operator1:/bin/bash
+operator2:x:1003:1003:operator two:/home/operator2:/bin/bash
+
+root@vbox:~# ls -l /home
+total 4
+drwx------. 16 harshil   harshil   4096 Feb 14 11:31 harshil
+drwx------.  3 operator1 operator1   78 Feb 14 11:53 operator1
+drwx------.  3 operator2 operator2   78 Feb 14 11:57 operator2
+drwx------.  4 user02    user02     113 Feb 13 12:19 user02
+drwx------.  3 operator1 operator1   78 Feb 13 16:26 user03
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
