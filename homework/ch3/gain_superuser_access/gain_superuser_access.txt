@@ -1,0 +1,51 @@
+2.Explore the shell environment of the student user. View the current user and group
+information and display the current working directory. Also view the environment variables
+that specify the user's home directory and the locations of the user's executable files.
+
+harshil@vbox:~/Documents/RHCSA/homework/ch3/gain_superuser_access$ id
+uid=1000(harshil) gid=1000(harshil) groups=1000(harshil),10(wheel) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+harshil@vbox:~/Documents/RHCSA/homework/ch3/gain_superuser_access$ pwd
+/home/harshil/Documents/RHCSA/homework/ch3/gain_superuser_access
+harshil@vbox:~/Documents/RHCSA/homework/ch3/gain_superuser_access$ echo $HOME
+/home/harshil
+harshil@vbox:~/Documents/RHCSA/homework/ch3/gain_superuser_access$ echo $PATH
+/home/harshil/.local/bin:/home/harshil/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
+
+______________________________________________________________________________________________________________
+
+3. Switch to the root user in a non-login shell and explore the new shell environment.
+
+root@vbox:/home/harshil/Documents/RHCSA/homework/ch3/gain_superuser_access# id
+uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+root@vbox:/home/harshil/Documents/RHCSA/homework/ch3/gain_superuser_access# pwd
+/home/harshil/Documents/RHCSA/homework/ch3/gain_superuser_access
+root@vbox:/home/harshil/Documents/RHCSA/homework/ch3/gain_superuser_access# echo $HOME 
+/root
+root@vbox:/home/harshil/Documents/RHCSA/homework/ch3/gain_superuser_access# echo $PATH
+/root/.local/bin:/root/bin:/sbin:/bin:/usr/sbin:/usr/bin
+root@vbox:/home/harshil/Documents/RHCSA/homework/ch3/gain_superuser_access# exit
+exit
+
+---------------------------------------------------------------------------------------------------------------
+
+4. Switch to the root user in a login shell and explore the new shell environment.
+
+root@vbox:/home/harshil/Documents/RHCSA/homework/ch3/gain_superuser_access# sudo su-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
