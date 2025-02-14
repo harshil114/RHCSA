@@ -1,0 +1,88 @@
+2.Create the operators secondary group with a GID of 30000.
+root@vbox:~# groupadd -g 30000 operators
+
+--------------------------------------------------------------------------------------------------------------
+3. Create the admin secondary group without specifying a GID.
+root@vbox:~# groupadd admin
+
+--------------------------------------------------------------------------------------------------------------
+4. Verify that both the operators and admin secondary groups exist.
+root@vbox:~# tail /etc/group
+chrony:x:984:
+tcpdump:x:72:
+plocate:x:983:
+gnome-remote-desktop:x:982:
+harshil:x:1000:
+user02:x:1001:
+operator1:x:1002:
+operator2:x:1003:
+operators:x:30000:
+admin:x:30001:
+
+---------------------------------------------------------------------------------------------------------------
+5.Ensure that the operator1, operator2, and operator3 users belong to the operators group.
+
+root@vbox:~# usermod -aG operators operator1
+root@vbox:~# usermod -aG operators operator2
+root@vbox:~# usermod -aG operators operator3
+
+root@vbox:~# id operator1
+uid=1002(operator1) gid=1002(operator1) groups=1002(operator1),30000(operators)
+root@vbox:~# id operator2
+uid=1003(operator2) gid=1003(operator2) groups=1003(operator2),30000(operators)
+root@vbox:~# id operator3
+uid=1004(operator3) gid=1004(operator3) groups=1004(operator3),30000(operators)
+
+--------------------------------------------------------------------------------------------------------------
+6. Ensure that the sysadmin1, sysadmin2 and sysadmin3 users belong to the admin
+group. Enable administrative rights for all the admin group members. Verify that any
+member of the admin group can run administrative commands.
+
+root@vbox:~# usermod -aG admin sysadmin1
+root@vbox:~# usermod -aG admin sysadmin2
+root@vbox:~# usermod -aG admin sysadmin3
+root@vbox:~# id sysadmin1
+uid=1005(sysadmin1) gid=1005(sysadmin1) groups=1005(sysadmin1),30001(admin)
+root@vbox:~# id sysadmin2
+uid=1006(sysadmin2) gid=1006(sysadmin2) groups=1006(sysadmin2),30001(admin)
+root@vbox:~# id sysadmin3
+uid=1007(sysadmin3) gid=1007(sysadmin3) groups=1007(sysadmin3),30001(admin)
+root@vbox:~# tail /etc/group
+harshil:x:1000:
+user02:x:1001:
+operator1:x:1002:
+operator2:x:1003:
+operators:x:30000:operator1,operator2,operator3
+admin:x:30001:sysadmin1,sysadmin2,sysadmin3
+operator3:x:1004:
+sysadmin1:x:1005:
+sysadmin2:x:1006:
+sysadmin3:x:1007:
+root@vbox:~# echo "%admin ALL=(ALL) ALL" >> /etc/sudoers.d/admin
+root@vbox:~# su - sysadmin1
+
+sysadmin1@vbox:~$ sudo cat /etc/sudoers.d/admin
+[sudo] password for sysadmin1: 
+%admin ALL=(ALL) ALL
+%admin ALL=(ALL) ALL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
